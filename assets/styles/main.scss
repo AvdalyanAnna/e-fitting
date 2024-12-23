@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --black: #1a1a1a;
+  --bluegreen: #5ba8a0;
+  --yellowgreen: #cbe54e;
+  --font-family: "Inter", sans-serif;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 70px;
+  margin: 0 auto;
+  @media screen and (max-width: 1100px) {
+    padding: 0 35px;
+  }
+  @media screen and (max-width: 950px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0 12px;
+  }
+}
+
+.fit {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 53px;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  &-slider {
+    display: none;
+    @media screen and (max-width: 800px) {
+      display: block;
+      max-width: 100%;
+    }
+
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 288px;
+        height: 220px;
+        object-fit: contain;
+      }
+    }
+
+    .p-carousel-indicator-list {
+      --p-carousel-indicator-list-padding: 10px 12px 0;
+      --p-carousel-indicator-list-gap: 0;
+    }
+
+    .p-carousel-indicator {
+      width: 100%;
+      flex: 1;
+    }
+
+    .p-carousel-indicator-button {
+      width: 100%;
+      --p-carousel-indicator-border-radius: 3px;
+      --p-carousel-indicator-height: 3px;
+      --p-carousel-indicator-background: #D9D9D9;
+      --p-carousel-indicator-active-background: #000;
+    }
+  }
+
+  &-images {
+    max-width: calc(100% - 38%);
+    width: 100%;
+    flex: 1;
+    position: relative;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+
+    &-text {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      color: #808080;
+      @media screen and (max-width: 2000px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 12px;
+      }
+    }
+
+    &-1 {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 100px;
+
+      img {
+        max-width: calc(50% - 12px);
+        flex: 1;
+        object-fit: contain;
+      }
+
+      @media screen and (max-width: 950px) {
+        gap: 12px;
+        margin-bottom: 50px;
+        img {
+          max-width: calc(50% - 6px);
+        }
+      }
+    }
+
+    &-2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        flex: 1;
+        max-width: calc(33% - 12px);
+        object-fit: contain;
+      }
+
+      @media screen and (max-width: 950px) {
+        gap: 8px;
+        img {
+          max-width: calc(33% - 8px);
+        }
+      }
+    }
+  }
+
+  &-info {
+    max-width: 37%;
+    width: 100%;
+    @media screen and (max-width: 800px) {
+      max-width: 100%;
+    }
+
+    &-top {
+      margin-bottom: 45px;
+      @media screen and (max-width: 950px) {
+        margin-bottom: 35px;
+      }
+      @media screen and (max-width: 800px) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &-price {
+      margin-bottom: 35px;
+      @media screen and (max-width: 950px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--black);
+    margin-bottom: 4px;
+    @media screen and (max-width: 2000px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 950px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 23px;
+    }
+  }
+
+  &-desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--black);
+    @media screen and (max-width: 2000px) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 950px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 17px;
+    }
+  }
+
+  &-price {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--black);
+    margin-bottom: 2px;
+    @media screen and (max-width: 2000px) {
+      font-size: 21px;
+    }
+    @media screen and (max-width: 950px) {
+      font-size: 17px;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 23px;
+    }
+
+    &-text {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--black);
+      @media screen and (max-width: 2000px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-tab {
+    margin-top: 80px;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+
+    .p-tab {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 25px;
+      color: var(--black);
+      @media screen and (max-width: 2000px) {
+        font-size: 17px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 14px;
+      }
+    }
+
+    .p-tablist-tab-list {
+      --p-tabs-tab-active-border-color: var(--black);
+      --p-tabs-active-bar-background: var(--black);
+      --p-tabs-tab-padding: 5px 0px;
+    }
+
+    .p-tab-active {
+      border-bottom-width: 2px;
+    }
+
+    .p-tablist-active-bar {
+      display: none;
+    }
+
+    .p-tabpanels {
+      --p-tabs-tabpanel-padding: 25px 0;
+    }
+
+    &__inner {
+      //margin-top: 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 126px;
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-item {
+        max-width: 520px;
+        width: 100%;
+        @media screen and (max-width: 2000px) {
+          max-width: 394px;
+        }
+        @media screen and (max-width: 800px) {
+          max-width: 100%;
+        }
+      }
+
+      .fit-info-top {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--black);
+      @media screen and (max-width: 2000px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 17px;
+      }
+    }
+
+    &__info {
+      margin-bottom: 26px;
+
+      &-title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 22px;
+        color: var(--black);
+        margin-bottom: 11px;
+        @media screen and (max-width: 2000px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 950px) {
+          font-size: 14px;
+          margin-bottom: 6px;
+        }
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+      }
+
+      &-desc {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 22px;
+        color: var(--black);
+        @media screen and (max-width: 2000px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 950px) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+        &:not(&:nth-last-child(1)) {
+          margin-bottom: 11px;
+          @media screen and (max-width: 950px) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  &-accordion {
+    display: none;
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
+
+    .p-accordionpanel {
+      border-width: 0 !important;
+      --p-accordion-header-padding: 12px 0 15px;
+      --p-accordion-header-font-weight: 300;
+      --p-accordion-content-padding: 7px 0;
+      --p-accordion-header-toggle-icon-color: #000;
+      font-family: var(--font-family);
+
+    }
+
+    .p-accordionheader {
+      font-size: 17px;
+      color: var(--black);
+    }
+  }
+}
+
+.line {
+  border: 0.3px solid #000;
+  width: 100%;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
