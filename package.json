@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.2.5",
+    "lottie-web": "^5.12.2",
     "nuxt": "^3.14.1592",
+    "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue3-lottie": "^3.3.1"
   },
   "devDependencies": {
     "@primevue/nuxt-module": "^4.2.5",
