@@ -7,8 +7,14 @@
   --font-family: "Inter", sans-serif;
   --p-primary-color: #000;
   --p-primary-200: #000;
+  --p-content-background:#fff;
+  --p-form-field-background:#fff;
+  --p-overlay-modal-background:#fff;
+  color-scheme:ligth;
 }
-
+.p-select-list{
+  background: #fff;
+}
 #app {
   width: 100%;
   height: 100%;
